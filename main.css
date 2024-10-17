@@ -47,7 +47,8 @@ main {
     padding: 20px;
 }
 
-.exhibition-details, .awards {
+
+.section-details {
     background: #fff;
     border-radius: 5px;
     padding: 15px;
@@ -74,14 +75,12 @@ footer {
 .image-box {
     width: 30%; /* Adjust width for three boxes per row */
     margin-bottom: 20px; /* Space between rows */
-    position: relative; /* For positioning */
 }
 
 .image-box img {
     width: 100%; /* Make image responsive */
     height: auto;
     border-radius: 8px; /* Optional: rounded corners */
-    position: relative;
 }
 
 .image-box:nth-child(3n+1) {
