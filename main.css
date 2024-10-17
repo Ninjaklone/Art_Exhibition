@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    margin: 15px 0;
+    position: sticky;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.exhibition-details, .awards {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.image-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between boxes */
+}
+
+.image-box {
+    width: 30%; /* Adjust width for three boxes per row */
+    margin-bottom: 20px; /* Space between rows */
+    position: relative; /* For positioning */
+}
+
+.image-box img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners */
+    position: relative;
+}
+
+.image-box:nth-child(3n+1) {
+    margin-left: 0; /* Align first image in each row */
+}
+
+.image-box:nth-child(3n+2) {
+    margin-left: 10%; /* Stagger second image */
+}
+
+.image-box:nth-child(3n+3) {
+    margin-left: 20%; /* Stagger third image */
+}
