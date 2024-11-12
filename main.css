@@ -49,7 +49,17 @@ main {
 
 
 .section-details {
+    
     background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-gallery{
+    background: #fff;
+    
     border-radius: 5px;
     padding: 15px;
     margin: 10px 0;
@@ -66,31 +76,183 @@ footer {
     width: 100%;
 }
 
+.carousel img{
+    border-radius: 10%;
+}
+
 .image-boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Space between boxes */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(292px, 1fr)); /* Allow wrapping */
+    gap: 10px;
+    justify-content: center; /* Center the entire grid horizontally */
+    align-items: center;     /* Center items vertically */
+    margin: 0 auto;         /* Center the grid container */
+    width: 65%;              /* Set width of the grid */
+    height: auto;           /* Adjust height to auto for wrapping */
 }
 
 .image-box {
-    width: 30%; /* Adjust width for three boxes per row */
-    margin-bottom: 20px; /* Space between rows */
+    overflow: hidden;  
+    position: center;
+    margin: 0px; width: 292px; 
+    height: 569px; 
+    border-width: 1px; 
+    border-radius: 8px;
+    border-style: solid;
+}
+
+.image-box:nth-child(2) {
+    margin-top: 60px; /* Adjust the value as needed to push it down */
 }
 
 .image-box img {
     width: 100%; /* Make image responsive */
     height: auto;
-    border-radius: 8px; /* Optional: rounded corners */
 }
 
-.image-box:nth-child(3n+1) {
-    margin-left: 0; /* Align first image in each row */
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;button {
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+
+    button:active {
+        background-color: #222;
+    }
+
+}
+button a{
+    text-decoration: none;
+    color: #fff;
+
 }
 
-.image-box:nth-child(3n+2) {
-    margin-left: 10%; /* Stagger second image */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    height: 300px;
 }
 
-.image-box:nth-child(3n+3) {
-    margin-left: 20%; /* Stagger third image */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    left: 0;
+}
+
+.carousel-prev,
+.carousel-next {
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Add your own styles for carousel items */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item h3,
+.carousel-item p {
+    margin: 0;
+    padding: 5px;
+}
+
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.slide-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.slideshow-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slide-btn {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
 }

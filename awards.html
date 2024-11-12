@@ -3,100 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Awards</title>
+    <title>Art Exhibition | Awards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Awards Art Exhibition</h1>
-        <p>Celebrating the creativity and talent of artists from around the world.</p>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="exhibition.html">Exhibition Details</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="contests">
-            <h2>Current Contests</h2>
-            <ul>
-                <li><strong>IGOR 2024:</strong> 18th Annual Juried Exhibition</li>
-                <li><strong>Camelback Gallery:</strong> 7th Annual Shades Of Red Art Awards</li>
-                <li><strong>NOAPS:</strong> Best of America Small Works 2024</li>
-                <li><strong>OPA:</strong> National Convention Wet Painting Competition</li>
-            </ul>
-        </section>
-        
-        <section id="winners">
-            <h2>Recent Winners</h2>
-            <ul>
-                <li><strong>Best in Show:</strong> Kevin Slaby - "Steam Alley" (Oil)</li>
-                <li><strong>Best Use of Light and Color:</strong> Tom B Lockhart - "Sundown on Wintry Back" (Oil)</li>
-                <li><strong>Director's Choice Award:</strong> Timothy Rees - "Young Curiosity" (Oil)</li>
-            </ul>
-        </section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">Awards Art Exhibition</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exhibition.html">Exhibition</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="awards.html">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <section id="image-gallery">
-            <h2>Gallery of Award-Winning Artworks</h2>
-            <div class="image-boxes">
-                <div class="image-box">
-                    <img src="Gallery/pexels-heftiba-1194420.jpg" alt="Artwork 1">
-                    <p>Artwork Title 1</p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">Art Exhibition Awards</h1>
+                
+                <div class="card mb-4" id="currentContests">
+                    <div class="card-header">
+                        <h3>Current Contests</h3>
+                    </div>
+                    <ul class="list-group list-group-flush" id="contestList">
+                        <!-- Contests will be dynamically populated -->
+                    </ul>
                 </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-pixabay-39348.jpg" alt="Artwork 2">
-                    <p>Artwork Title 2</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-pixabay-159862.jpg" alt="Artwork 3">
-                    <p>Artwork Title 3</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-pixabay-161154.jpg" alt="Artwork 4">
-                    <p>Artwork Title 4</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-pixabay-164455.jpg" alt="Artwork 5">
-                    <p>Artwork Title 5</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-steve-1109352.jpg" alt="Artwork 6">
-                    <p>Artwork Title 6</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-steve-1109354.jpg" alt="Artwork 7">
-                    <p>Artwork Title 7</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-steve-1183992.jpg" alt="Artwork 8">
-                    <p>Artwork Title 8</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-steve-1572386.jpg" alt="Artwork 9">
-                    <p>Artwork Title 9</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-steve-1585325.jpg" alt="Artwork 10">
-                    <p>Artwork Title 10</p>
-                </div>
-                <div class="image-box">
-                    <img src="Gallery/pexels-w-w-299285-889839.jpg" alt="Artwork 11">
-                    <p>Artwork Title 11</p>
+
+                <div class="card" id="recentWinners">
+                    <div class="card-header">
+                        <h3>Recent Winners</h3>
+                    </div>
+                    <ul class="list-group list-group-flush" id="winnersList">
+                        <!-- Winners will be dynamically populated -->
+                    </ul>
                 </div>
             </div>
-        </section>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Award Categories</h5>
+                        <ul class="list-unstyled" id="awardCategories">
+                            <!-- Categories will be dynamically populated -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <section id="about">
-            <h2>About the Awards</h2>
-            <p>The Awards Art Exhibition celebrates the best in contemporary art through various competitions and exhibitions.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2021 Top Art Awards. All rights reserved.</p>
+    <footer class="bg -dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Awards Art Exhibition. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,46 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awards Art Exhibition</title>
+    <title>Awards Art Exhibition | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <h1>Awards Art Exhibition</h1>
-        <p>Celebrating the creativity and talent of artists from around the world.</p>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="exhibition.html">Exhibition Details</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="section-details">
-            <h2>Exhibition Details</h2>
-            <p>Date: March 15 - April 15, 2023</p>
-            <p>Location: Art Gallery, Downtown</p>
-        </section>
-        <section class="section-details">
-            <h2>Awards</h2>
-            <ul>
-                <li>Best in Show</li>
-                <li>People's Choice Award</li>
-                <li>Best Emerging Artist</li>
-            </ul>
-        </section>
-        <section class="section-details">
-            <h2>Gallery</h2>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">Awards Art Exhibition</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exhibition.html">Exhibition</a></li>
+                    <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="display-4">Awards Art Exhibition 2024</h1>
+                <p class="lead">Celebrating creativity and talent from artists worldwide</p>
+                
+                <div id="slideshow" class="slideshow-container">
+                    <div class="slide-wrapper">
+                        <!-- Slides will be dynamically populated by JavaScript -->
+                    </div>
+                    <div class="slideshow-controls">
+                        <button id="prevSlide" class="slide-btn prev-btn">&#10094;</button>
+                        <button id="nextSlide" class="slide-btn next-btn">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Upcoming Exhibition</h5>
+                        <p>Date: March 15 - April 15, 2024</p>
+                        <p>Location: Downtown Art Gallery</p>
+                        <a href="exhibition.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <button><a href="gallery.html">View More</a></button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Awards Art Exhibition. All rights reserved.</p>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Awards Art Exhibition. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
